@@ -108,15 +108,3 @@ for drug in drug_list:
     print("---")
     
 print(f"Total drugs scraped: {len(drug_list)}")
-
-# If not already installed, do: pip install pandas fastparquet
-import pandas as pd
-
-URL_DATA = 'https://storage.data.gov.my/healthcare/pharmaceutical_products.parquet'
-
-df = pd.read_parquet(URL_DATA)
-
-# start dr from index 2
-df = df.iloc[2:]
-
-print(df)
